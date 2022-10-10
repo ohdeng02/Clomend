@@ -6,12 +6,12 @@
     app:startDestination="@id/closetFragment">
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.example.clomend.SplashFragment"
+        android:name="com.example.clomend.login.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" />
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.clomend.LoginFragment"
+        android:name="com.example.clomend.login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -20,27 +20,27 @@
     </fragment>
     <fragment
         android:id="@+id/info_InputFragment"
-        android:name="com.example.clomend.Info_InputFragment"
+        android:name="com.example.clomend.login.Info_InputFragment"
         android:label="fragment_info__input"
         tools:layout="@layout/fragment_info__input" />
     <fragment
         android:id="@+id/closetFragment"
-        android:name="com.example.clomend.ClosetFragment"
+        android:name="com.example.clomend.closet.ClosetFragment"
         android:label="fragment_closet"
         tools:layout="@layout/fragment_closet" />
     <fragment
         android:id="@+id/communityFragment"
-        android:name="com.example.clomend.CommunityFragment"
+        android:name="com.example.clomend.community.CommunityFragment"
         android:label="fragment_community"
         tools:layout="@layout/fragment_community" />
     <fragment
         android:id="@+id/coordi_BookFragment"
-        android:name="com.example.clomend.Coordi_BookFragment"
+        android:name="com.example.clomend.coordi_book.Coordi_BookFragment"
         android:label="fragment_coordi_book"
         tools:layout="@layout/fragment_coordi_book" />
     <fragment
         android:id="@+id/calendarFragment"
-        android:name="com.example.clomend.CalendarFragment"
+        android:name="com.example.clomend.calendar.CalendarFragment"
         android:label="fragment_calendar"
         tools:layout="@layout/fragment_calendar" />
     <fragment
