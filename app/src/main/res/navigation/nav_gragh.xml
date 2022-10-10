@@ -53,4 +53,24 @@
         android:name="com.example.clomend.My_PageFragment"
         android:label="fragment_my__page"
         tools:layout="@layout/fragment_my_page" />
+    <fragment
+        android:id="@+id/communityInFragment"
+        android:name="com.example.clomend.CommunityInFragment"
+        android:label="fragment_community_in"
+        tools:layout="@layout/fragment_community_in" />
+    <fragment
+        android:id="@+id/coordiRecommendFragment"
+        android:name="com.example.clomend.CoordiRecommendFragment"
+        android:label="fragment_coordi_recommend"
+        tools:layout="@layout/fragment_coordi_recommend" />
+    <fragment
+        android:id="@+id/coordiMakeFragment"
+        android:name="com.example.clomend.CoordiMakeFragment"
+        android:label="fragment_coordi_make"
+        tools:layout="@layout/fragment_coordi_make" />
+    <fragment
+        android:id="@+id/coordiInFragment"
+        android:name="com.example.clomend.CoordiInFragment"
+        android:label="fragment_coordi_in"
+        tools:layout="@layout/fragment_coordi_in" />
 </navigation>
