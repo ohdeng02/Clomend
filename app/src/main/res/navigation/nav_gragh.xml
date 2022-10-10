@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_gragh"
+    app:startDestination="@id/closetFragment">
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.clomend.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.clomend.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_info_InputFragment"
+            app:destination="@id/info_InputFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/info_InputFragment"
+        android:name="com.example.clomend.Info_InputFragment"
+        android:label="fragment_info__input"
+        tools:layout="@layout/fragment_info__input" />
+    <fragment
+        android:id="@+id/closetFragment"
+        android:name="com.example.clomend.ClosetFragment"
+        android:label="fragment_closet"
+        tools:layout="@layout/fragment_closet" />
+    <fragment
+        android:id="@+id/communityFragment"
+        android:name="com.example.clomend.CommunityFragment"
+        android:label="fragment_community"
+        tools:layout="@layout/fragment_community" />
+    <fragment
+        android:id="@+id/coordi_BookFragment"
+        android:name="com.example.clomend.Coordi_BookFragment"
+        android:label="fragment_coordi_book"
+        tools:layout="@layout/fragment_coordi_book" />
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.example.clomend.CalendarFragment"
+        android:label="fragment_calendar"
+        tools:layout="@layout/fragment_calendar" />
+    <fragment
+        android:id="@+id/weatherFragment"
+        android:name="com.example.clomend.WeatherFragment"
+        android:label="fragment_weather"
+        tools:layout="@layout/fragment_weather" />
+    <fragment
+        android:id="@+id/my_PageFragment"
+        android:name="com.example.clomend.My_PageFragment"
+        android:label="fragment_my__page"
+        tools:layout="@layout/fragment_my_page" />
+</navigation>

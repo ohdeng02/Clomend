@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Info_InputFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="성별"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="303dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="취향(선택)"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="382dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="키/몸무게(선택)"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="518dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="나이(선택)"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="580dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="107dp"
+        android:layout_height="36dp"
+        android:background="@drawable/button_round"
+        android:text="확인"
+        tools:layout_editor_absoluteX="152dp"
+        tools:layout_editor_absoluteY="656dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/button_round"
+        android:text="여"
+        android:textColor="#000000"
+        android:textSize="10dp"
+        tools:layout_editor_absoluteX="204dp"
+        tools:layout_editor_absoluteY="303dp" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/button_round"
+        android:text="남"
+        android:textColor="#000000"
+        android:textSize="10dp"
+        tools:layout_editor_absoluteX="174dp"
+        tools:layout_editor_absoluteY="303dp" />
+
+    <Button
+        android:id="@+id/button20"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:background="@drawable/button_round"
+        android:text="10대"
+        android:textColor="#000000"
+        android:textSize="10dp"
+        tools:layout_editor_absoluteX="133dp"
+        tools:layout_editor_absoluteY="580dp" />
+
+    <Button
+        android:id="@+id/button21"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:background="@drawable/button_round"
+        android:text="50대"
+        android:textColor="#000000"
+        android:textSize="10dp"
+        tools:layout_editor_absoluteX="294dp"
+        tools:layout_editor_absoluteY="579dp" />
+
+    <Button
+        android:id="@+id/button22"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:background="@drawable/button_round"
+        android:text="20대"
+        android:textColor="#000000"
+        android:textSize="10dp"
+        tools:layout_editor_absoluteX="174dp"
+        tools:layout_editor_absoluteY="580dp" />
+
+    <Button
+        android:id="@+id/button24"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:background="@drawable/button_round"
+        android:text="30대"
+        android:textColor="#000000"
+        android:textSize="10dp"
+        tools:layout_editor_absoluteX="214dp"
+        tools:layout_editor_absoluteY="580dp" />
+
+    <Button
+        android:id="@+id/button23"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:background="@drawable/button_round"
+        android:text="40대"
+        android:textColor="#000000"
+        android:textSize="10dp"
+        tools:layout_editor_absoluteX="254dp"
+        tools:layout_editor_absoluteY="580dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="닉네임"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="206dp" />
+
+    <Button
+        android:id="@+id/button14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="미니멀룩"
+        tools:layout_editor_absoluteX="297dp"
+        tools:layout_editor_absoluteY="372dp" />
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오피스룩"
+        tools:layout_editor_absoluteX="209dp"
+        tools:layout_editor_absoluteY="372dp" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="아메카지룩"
+        tools:layout_editor_absoluteX="209dp"
+        tools:layout_editor_absoluteY="420dp" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="캐주얼"
+        tools:layout_editor_absoluteX="121dp"
+        tools:layout_editor_absoluteY="372dp" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="페미닌룩"
+        tools:layout_editor_absoluteX="121dp"
+        tools:layout_editor_absoluteY="420dp" />
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="64dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="133dp"
+        tools:layout_editor_absoluteY="509dp" />
+
+    <EditText
+        android:id="@+id/editTextNumber2"
+        android:layout_width="64dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="234dp"
+        tools:layout_editor_absoluteY="509dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cm"
+        tools:layout_editor_absoluteX="197dp"
+        tools:layout_editor_absoluteY="522dp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="kg"
+        tools:layout_editor_absoluteX="298dp"
+        tools:layout_editor_absoluteY="522dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
