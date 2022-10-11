@@ -12,20 +12,5 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
-        <style name="TextViewStyle" parent="@style/Widget.AppCompat.TextView">
-            <item name="android:textColor">@color/night_background</item>
-            <item name="android:background">@color/trans</item>
-        </style>
-        <style name="LineView">
-            <item name="android:background">@color/night_background</item>
-        </style>
-        <style name="CalendarDayTextViewStyle" parent="@style/Widget.AppCompat.TextView">
-            <item name="android:textColor">@color/night_background</item>
-            <item name="android:background">@color/trans</item>
-        </style>
-        <style name="LightColorTextViewStyle" parent="@style/Widget.AppCompat.TextView">
-            <item name="android:textColor">@color/light_gray</item>
-            <item name="android:background">@color/trans</item>
-        </style>
     </style>
 </resources>
