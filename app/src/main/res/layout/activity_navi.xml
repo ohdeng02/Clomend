@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NaviActivity">
+    tools:context=".main.MainActivity">
 
     <FrameLayout
         android:id="@+id/mainFrameLayout"
@@ -21,7 +21,7 @@
         app:itemTextColor="@color/white"
         app:labelVisibilityMode="unlabeled"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/navi_menu"
+        app:menu="@menu/bottom_menu"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
