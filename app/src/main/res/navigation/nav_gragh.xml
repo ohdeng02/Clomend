@@ -27,17 +27,35 @@
         android:id="@+id/closetFragment"
         android:name="com.example.clomend.closet.ClosetFragment"
         android:label="fragment_closet"
-        tools:layout="@layout/fragment_closet" />
+        tools:layout="@layout/fragment_closet" >
+        <action
+            android:id="@+id/action_closetFragment_to_coordiRecommendFragment"
+            app:destination="@id/coordiRecommendFragment" />
+        <action
+            android:id="@+id/action_closetFragment_to_coordiMakeFragment"
+            app:destination="@id/coordiMakeFragment" />
+        <action
+            android:id="@+id/action_closetFragment_to_clothesAddFragment"
+            app:destination="@id/clothesAddFragment" />
+    </fragment>
     <fragment
         android:id="@+id/communityFragment"
         android:name="com.example.clomend.community.CommunityFragment"
         android:label="fragment_community"
-        tools:layout="@layout/fragment_community" />
+        tools:layout="@layout/fragment_community" >
+        <action
+            android:id="@+id/action_communityFragment_to_communityInFragment"
+            app:destination="@id/communityInFragment" />
+    </fragment>
     <fragment
         android:id="@+id/coordi_BookFragment"
         android:name="com.example.clomend.coordi_book.Coordi_BookFragment"
         android:label="fragment_coordi_book"
-        tools:layout="@layout/fragment_coordi_book" />
+        tools:layout="@layout/fragment_coordi_book" >
+        <action
+            android:id="@+id/action_coordi_BookFragment_to_coordiInFragment"
+            app:destination="@id/coordiInFragment" />
+    </fragment>
     <fragment
         android:id="@+id/calendarFragment"
         android:name="com.example.clomend.calendar.CalendarFragment"
