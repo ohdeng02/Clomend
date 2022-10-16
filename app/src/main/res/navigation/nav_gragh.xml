@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_gragh"
-    app:startDestination="@id/closetFragment">
+    app:startDestination="@id/splashFragment">
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.example.clomend.login.SplashFragment"
@@ -15,8 +15,8 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_loginFragment_to_info_InputFragment"
-            app:destination="@id/info_InputFragment" />
+            android:id="@+id/action_loginFragment_to_resisterFragment"
+            app:destination="@id/resisterFragment" />
     </fragment>
     <fragment
         android:id="@+id/info_InputFragment"
@@ -68,7 +68,7 @@
         tools:layout="@layout/fragment_weather" />
     <fragment
         android:id="@+id/my_PageFragment"
-        android:name="com.example.clomend.My_PageFragment"
+        android:name="com.example.clomend.mypage.My_PageFragment"
         android:label="fragment_my__page"
         tools:layout="@layout/fragment_my_page" />
     <fragment
@@ -96,4 +96,23 @@
         android:name="com.example.clomend.ClothesAddFragment"
         android:label="fragment_clothes_add"
         tools:layout="@layout/fragment_clothes_add" />
+    <action
+        android:id="@+id/action_global_loginFragment"
+        app:destination="@id/loginFragment"
+        app:popUpTo="@id/loginFragment"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@+id/action_global_closetFragment"
+        app:destination="@id/closetFragment"
+        app:popUpTo="@id/closetFragment"
+        app:popUpToInclusive="true" />
+    <fragment
+        android:id="@+id/resisterFragment"
+        android:name="com.example.clomend.ResisterFragment"
+        android:label="fragment_resister"
+        tools:layout="@layout/fragment_resister" >
+        <action
+            android:id="@+id/action_resisterFragment_to_info_InputFragment"
+            app:destination="@id/info_InputFragment" />
+    </fragment>
 </navigation>
