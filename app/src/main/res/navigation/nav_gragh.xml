@@ -63,7 +63,7 @@
         tools:layout="@layout/fragment_calendar" />
     <fragment
         android:id="@+id/weatherFragment"
-        android:name="com.example.clomend.WeatherFragment"
+        android:name="com.example.clomend.weather.WeatherFragment"
         android:label="fragment_weather"
         tools:layout="@layout/fragment_weather" />
     <fragment
@@ -73,27 +73,27 @@
         tools:layout="@layout/fragment_my_page" />
     <fragment
         android:id="@+id/communityInFragment"
-        android:name="com.example.clomend.CommunityInFragment"
+        android:name="com.example.clomend.community.CommunityInFragment"
         android:label="fragment_community_in"
         tools:layout="@layout/fragment_community_in" />
     <fragment
         android:id="@+id/coordiRecommendFragment"
-        android:name="com.example.clomend.CoordiRecommendFragment"
+        android:name="com.example.clomend.closet.CoordiRecommendFragment"
         android:label="fragment_coordi_recommend"
         tools:layout="@layout/fragment_coordi_recommend" />
     <fragment
         android:id="@+id/coordiMakeFragment"
-        android:name="com.example.clomend.CoordiMakeFragment"
+        android:name="com.example.clomend.closet.CoordiMakeFragment"
         android:label="fragment_coordi_make"
         tools:layout="@layout/fragment_coordi_make" />
     <fragment
         android:id="@+id/coordiInFragment"
-        android:name="com.example.clomend.CoordiInFragment"
+        android:name="com.example.clomend.coordi_book.CoordiInFragment"
         android:label="fragment_coordi_in"
         tools:layout="@layout/fragment_coordi_in" />
     <fragment
         android:id="@+id/clothesAddFragment"
-        android:name="com.example.clomend.ClothesAddFragment"
+        android:name="com.example.clomend.closet.ClothesAddFragment"
         android:label="fragment_clothes_add"
         tools:layout="@layout/fragment_clothes_add" />
     <action

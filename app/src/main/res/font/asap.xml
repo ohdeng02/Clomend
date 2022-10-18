@@ -3,18 +3,18 @@
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/Asap_Regular" />
+        android:font="@font/asap_regular" />
     <font
         android:fontStyle="italic"
         android:fontWeight="400"
-        android:font="@font/Asap_Italic" />
+        android:font="@font/asap_italic" />
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/Asap_Bold" />
+        android:font="@font/asap_bold" />
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/Asap_BoldItalic" />
+        android:font="@font/asap_bold_italic" />
 
 </font-family>

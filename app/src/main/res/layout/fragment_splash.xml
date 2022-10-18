@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/Main_color"
-    tools:context=".SplashFragment">
+    tools:context=".login.SplashFragment">
 
     <TextView
         android:id="@+id/clomend"
@@ -15,7 +15,7 @@
         android:layout_alignParentTop="true"
         android:gravity="top"
         android:text="@string/CLOMEND"
-        android:fontFamily="@font/Asap_Regular"
+        android:fontFamily="@font/asap_regular"
         android:textColor="@color/white"
         android:textSize="55sp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
