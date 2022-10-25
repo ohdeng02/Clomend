@@ -11,7 +11,7 @@ import com.example.clomend.R
 import com.example.clomend.databinding.FragmentMyPageBinding
 
 class My_PageFragment : Fragment() {
-    private var _binding : FragmentMyPageBinding? = null
+    private var _binding : com.example.clomend.databinding.FragmentMyPageBinding? = null
     private val binding get() = _binding!!
 
     fun onCreatedView(inflater: LayoutInflater,
