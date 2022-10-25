@@ -110,7 +110,7 @@
         android:id="@+id/resisterFragment"
         android:name="com.example.clomend.ResisterFragment"
         android:label="fragment_resister"
-        tools:layout="@layout/fragment_resister" >
+        tools:layout="@layout/fragment_register" >
         <action
             android:id="@+id/action_resisterFragment_to_info_InputFragment"
             app:destination="@id/info_InputFragment" />

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import com.example.clomend.R
 import com.example.clomend.databinding.FragmentSplashBinding
 import kotlinx.coroutines.Dispatchers
@@ -27,8 +28,9 @@ class SplashFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        lifecycleScope.launch(Dispatchers.IO){
-            delay(2000)
+        lifecycleScope.launch(){
+            delay(1000)
+            findNavController().navigate(R.id.action_global_loginFragment)
         }
     }
 
