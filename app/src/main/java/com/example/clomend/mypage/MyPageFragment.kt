@@ -10,7 +10,7 @@ import android.widget.Spinner
 import com.example.clomend.R
 import com.example.clomend.databinding.FragmentMyPageBinding
 
-class My_PageFragment : Fragment() {
+class MyPageFragment : Fragment() {
     private var _binding : com.example.clomend.databinding.FragmentMyPageBinding? = null
     private val binding get() = _binding!!
 

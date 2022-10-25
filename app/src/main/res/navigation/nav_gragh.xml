@@ -15,8 +15,8 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_loginFragment_to_resisterFragment"
-            app:destination="@id/resisterFragment" />
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
     </fragment>
     <fragment
         android:id="@+id/info_InputFragment"
@@ -48,8 +48,8 @@
             app:destination="@id/communityInFragment" />
     </fragment>
     <fragment
-        android:id="@+id/coordi_BookFragment"
-        android:name="com.example.clomend.coordi_book.Coordi_BookFragment"
+        android:id="@+id/coordiBookFragment"
+        android:name="com.example.clomend.coordi_book.CoordiBookFragment"
         android:label="fragment_coordi_book"
         tools:layout="@layout/fragment_coordi_book" >
         <action
@@ -67,8 +67,8 @@
         android:label="fragment_weather"
         tools:layout="@layout/fragment_weather" />
     <fragment
-        android:id="@+id/my_PageFragment"
-        android:name="com.example.clomend.mypage.My_PageFragment"
+        android:id="@+id/myPageFragment"
+        android:name="com.example.clomend.mypage.MyPageFragment"
         android:label="fragment_my__page"
         tools:layout="@layout/fragment_my_page" />
     <fragment
@@ -107,12 +107,12 @@
         app:popUpTo="@id/closetFragment"
         app:popUpToInclusive="true" />
     <fragment
-        android:id="@+id/resisterFragment"
-        android:name="com.example.clomend.ResisterFragment"
+        android:id="@+id/registerFragment"
+        android:name="com.example.clomend.login.RegisterFragment"
         android:label="fragment_resister"
         tools:layout="@layout/fragment_register" >
         <action
-            android:id="@+id/action_resisterFragment_to_info_InputFragment"
+            android:id="@+id/action_registerFragment_to_info_InputFragment"
             app:destination="@id/info_InputFragment" />
     </fragment>
 </navigation>

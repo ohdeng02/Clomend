@@ -34,8 +34,9 @@ class LoginFragment : Fragment() {
         /* 로그인하는 user인 경우 */
         binding.btnLogin.setOnClickListener {
             //입력한 id와 password 가져오기
-            val id = binding.fieldId.text.toString()
-            val password = binding.fieldPassword.text.toString()
+            //val id = binding.fieldId.text.toString()
+            //val password = binding.fieldPassword.text.toString()
+            findNavController().navigate(R.id.action_global_closetFragment)
 
         }//end of view.btn_login.setOnClickListene
     }//end of onViewCreated

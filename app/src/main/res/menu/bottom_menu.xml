@@ -2,23 +2,23 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/Coordi_BookFragment"
+        android:id="@+id/coordiBookFragment"
         android:title="  코디북  "
         android:icon="@drawable/n_bar_coordibook_ic"/>
     <item
-        android:id="@+id/CalenderFragment"
+        android:id="@+id/calenderFragment"
         android:title="달력"
         android:icon="@drawable/n_bar_calendar_ic"/>
     <item
-        android:id="@+id/ClosetFragment"
+        android:id="@+id/closetFragment"
         android:title="옷장"
         android:icon="@drawable/n_bar_closet_ic"/>
     <item
-        android:id="@+id/CommunityFragment"
+        android:id="@+id/communityFragment"
         android:title="커뮤니티"
         android:icon="@drawable/n_bar_community_ic"/>
     <item
-        android:id="@+id/MyPageFragment"
+        android:id="@+id/myPageFragment"
         android:title="마이페이지"
         android:icon="@drawable/n_bar_mypage_ic"/>
 

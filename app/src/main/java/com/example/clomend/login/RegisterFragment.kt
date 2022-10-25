@@ -26,9 +26,10 @@ class RegisterFragment : Fragment() {
         //회원 가입 버튼을 클릭한 경우
         binding.btnRegister.setOnClickListener {
             //id, pw, pw_confirm 값 가져오기
-            val id = binding.fieldRegisterId.text.toString()
-            val pw = binding.fieldRegisterPw.text.toString()
-            val pw_confirm = binding.fieldRegisterPwConfirm.text.toString()
+            //val id = binding.fieldRegisterId.text.toString()
+            //val pw = binding.fieldRegisterPw.text.toString()
+            //val pw_confirm = binding.fieldRegisterPwConfirm.text.toString()
+
         }//end of view.btn_register.setOnClickListener
     }//end of onViewCreated
 

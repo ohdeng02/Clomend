@@ -9,6 +9,7 @@ import androidx.navigation.ui.NavigationUI
 import com.example.clomend.R
 import com.example.clomend.databinding.ActivityMainBinding
 
+
 class MainActivity : AppCompatActivity() {
 
     private val binding by lazy {
