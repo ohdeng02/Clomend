@@ -9,14 +9,16 @@ import android.widget.ArrayAdapter
 import android.widget.Spinner
 import com.example.clomend.R
 import com.example.clomend.databinding.FragmentCommunityBinding
+import com.example.clomend.databinding.FragmentCoordiBookBinding
 
 class CommunityFragment : Fragment() {
     private var _binding : FragmentCommunityBinding? = null
     private val binding get() = _binding!!
 
-    fun onCreatedView(inflater: LayoutInflater,
-                      container: ViewGroup?,
-                      savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         _binding = FragmentCommunityBinding.inflate(inflater, container, false)
         return binding.root
     }
