@@ -46,6 +46,9 @@
         <action
             android:id="@+id/action_communityFragment_to_communityInFragment"
             app:destination="@id/communityInFragment" />
+        <action
+            android:id="@+id/action_communityFragment_to_coordiUploadFragment"
+            app:destination="@id/coordiUploadFragment" />
     </fragment>
     <fragment
         android:id="@+id/coordiBookFragment"
@@ -115,4 +118,9 @@
             android:id="@+id/action_registerFragment_to_info_InputFragment"
             app:destination="@id/info_InputFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/coordiUploadFragment"
+        android:name="com.example.clomend.CoordiUploadFragment"
+        android:label="fragment_coordi_upload"
+        tools:layout="@layout/fragment_coordi_upload" />
 </navigation>

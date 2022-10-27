@@ -33,7 +33,7 @@ class RegisterFragment : Fragment() {
             val pw = binding.fieldRegisterPw.text.toString()
             val pw_confirm = binding.fieldRegisterPwConfirm.text.toString()
 
-            when {
+           /* when {
                 id.isEmpty() ->
                     Toast.makeText(requireContext(), "아이디를 입력하세요.", Toast.LENGTH_LONG).show()
                 pw.isEmpty() || pw_confirm.isEmpty() ->
@@ -43,8 +43,8 @@ class RegisterFragment : Fragment() {
                 else -> {
                     //id, pw, pw_confirm 입력값이 정상이면
                     binding.registerLoader.visibility = View.VISIBLE
-                }//end of when-else
-            }//end of when
+                }
+            } */
         }
     }
     override fun onDestroyView() {
