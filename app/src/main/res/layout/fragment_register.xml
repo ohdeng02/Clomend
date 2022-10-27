@@ -45,7 +45,7 @@
             android:id="@+id/field_register_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="이메일을 입력해주세요."
+            android:hint="ID를 입력해주세요."
             android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
