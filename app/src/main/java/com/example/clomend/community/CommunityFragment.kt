@@ -1,5 +1,7 @@
 package com.example.clomend.community
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Spinner
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.clomend.R
 import com.example.clomend.databinding.FragmentCommunityBinding
 import com.example.clomend.databinding.FragmentCoordiBookBinding

@@ -29,17 +29,19 @@ class LoginFragment : Fragment() {
         /* 회원가입 user인 경우 */
         binding.btnRegister.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
+            //등록페이지로 넘어갑니다.
         }
 
         /* 로그인하는 user인 경우 */
         binding.btnLogin.setOnClickListener {
             //입력한 id와 password 가져오기
-            //val id = binding.fieldId.text.toString()
-            //val password = binding.fieldPassword.text.toString()
+            val id = binding.fieldId.text.toString()
+            val password = binding.fieldPassword.text.toString()
             findNavController().navigate(R.id.action_global_closetFragment)
+            //일단 로그인 페이지에서 아이디 비번 받는 받아서 변수로 변환 까지 되어있고, 로그인 누르면 옷장페이지로 넘어가게만 해 두었습니다.
 
-        }//end of view.btn_login.setOnClickListene
-    }//end of onViewCreated
+        }
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()
