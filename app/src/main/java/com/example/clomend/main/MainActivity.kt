@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         NavigationUI.setupWithNavController(binding.bottomNavigation, controller)
 
         controller.addOnDestinationChangedListener { _, destination, _ ->
-            if (arrayListOf(R.id.splashFragment, R.id.loginFragment,R.id.info_InputFragment,
+            if (arrayListOf(R.id.splashFragment, R.id.loginFragment,R.id.info_InputFragment,R.id.registerFragment,
                 R.id.clothesAddFragment).contains(destination.id)) {
                 binding.bottomNavigation.visibility = View.GONE
             } else {

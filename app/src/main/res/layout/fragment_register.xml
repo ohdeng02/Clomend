@@ -20,7 +20,7 @@
         tools:visibility="visible" />
 
     <TextView
-        android:id="@+id/LOGO"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -38,14 +38,14 @@
         android:layout_marginTop="48dp"
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/LOGO"
-        app:layout_constraintTop_toBottomOf="@+id/LOGO">
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/field_register_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="ID를 입력해주세요."
+            android:hint="이메일을 입력해주세요."
             android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
