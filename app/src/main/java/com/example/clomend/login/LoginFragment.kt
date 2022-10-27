@@ -26,13 +26,11 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        /* 회원가입 user인 경우 */
         binding.btnRegister.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
             //등록페이지로 넘어갑니다.
         }
 
-        /* 로그인하는 user인 경우 */
         binding.btnLogin.setOnClickListener {
             //입력한 id와 password 가져오기
             val id = binding.fieldId.text.toString()
