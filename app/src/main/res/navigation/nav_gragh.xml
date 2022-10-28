@@ -120,7 +120,7 @@
     </fragment>
     <fragment
         android:id="@+id/coordiUploadFragment"
-        android:name="com.example.clomend.CoordiUploadFragment"
+        android:name="com.example.clomend.community.CoordiUploadFragment"
         android:label="fragment_coordi_upload"
         tools:layout="@layout/fragment_coordi_upload" />
 </navigation>
