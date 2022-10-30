@@ -3,7 +3,7 @@ package com.example.clomend.coordi_book
 import com.example.clomend.R
 
 
-enum class CooridbookData (val img: Int, val coordiTitle: String, val gen_date: String) {
+enum class CoordibookData (val img: Int, val coordiTitle: String, val gen_date: String) {
     COORDI01(R.drawable.coordi1,"코디북1","2022-10-30"),
     COORDI02(R.drawable.coordi2,"코디북2","2022-10-29"),
     COORDI03(R.drawable.coordi3,"코디북3","2022-10-28"),

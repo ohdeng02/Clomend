@@ -11,6 +11,7 @@ import androidx.navigation.ui.NavigationUI
 import com.example.clomend.R
 import com.example.clomend.closet.ClosetFragment
 import com.example.clomend.community.CommunityFragment
+import com.example.clomend.coordi_book.CoordiBookFragment
 import com.example.clomend.data.RetrofitService
 import com.example.clomend.data.User
 import com.example.clomend.databinding.ActivityMainBinding
@@ -32,6 +33,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         replaceCommunityFragment(CommunityFragment())
         replaceClosetFragment(ClosetFragment())
+        replaceCoordibookFragment(CoordiBookFragment())
+
 
 //        val retrofit = Retrofit.Builder().baseUrl("https://Clomend.shop/")
 //            .addConverterFactory(GsonConverterFactory.create()).build();
@@ -75,6 +78,11 @@ class MainActivity : AppCompatActivity() {
         fragmentTransaction.commit()
     }
     private fun replaceClosetFragment(ClosetFragment : Fragment){
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction= fragmentManager.beginTransaction()
+        fragmentTransaction.commit()
+    }
+    private fun replaceCoordibookFragment(CoordiBookFragment : Fragment){
         val fragmentManager = supportFragmentManager
         val fragmentTransaction= fragmentManager.beginTransaction()
         fragmentTransaction.commit()
