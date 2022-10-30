@@ -98,7 +98,7 @@
         tools:layout_editor_absoluteX="-1dp">
 
         <Button
-            android:id="@+id/button19"
+            android:id="@+id/style_recommend"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -108,7 +108,7 @@
             android:text="스타일 추천받기" />
 
         <Button
-            android:id="@+id/button25"
+            android:id="@+id/coordi_create"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -128,4 +128,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         tools:listitem="@layout/list_item_closet"/>
+
+    <ImageButton
+        android:id="@+id/weather_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/white"
+        android:src="@drawable/weather_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

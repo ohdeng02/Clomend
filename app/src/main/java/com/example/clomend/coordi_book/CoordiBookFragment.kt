@@ -16,7 +16,6 @@ class CoordiBookFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        //fragment_login 뷰 inflate
         _binding = FragmentCoordiBookBinding.inflate(inflater, container, false)
         return binding.root
     }

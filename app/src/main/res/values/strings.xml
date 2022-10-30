@@ -3,4 +3,26 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="CLOMEND">CLOMEND</string>
+    <string name="communityTitle1">코디1</string>
+    <string name="communityTitle2">코디2</string>
+    <string name="communityTitle3">코디3</string>
+    <string name="communityTitle4">코디4</string>
+    <string name="communityWriter1">유저1</string>
+    <string name="communityWriter2">유저2</string>
+    <string name="communityWriter3">유저3</string>
+    <string name="communityWriter4">유저4</string>
+    <string name="communityTime1">1 시간전</string>
+    <string name="communityTime2">2 시간전</string>
+    <string name="communityTime3">3 시간전</string>
+    <string name="communityTime4">4 시간전</string>
+    <string name="communityScore1">4.99</string>
+    <string name="communityScore2">4.98</string>
+    <string name="communityScore3">4.97</string>
+    <string name="communityScore4">4.96</string>
+    <string name="communityViewCnt1">284</string>
+    <string name="communityViewCnt2">214</string>
+    <string name="communityViewCnt3">34</string>
+    <string name="communityViewCnt4">313</string>
+
+
 </resources>
