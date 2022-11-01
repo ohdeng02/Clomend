@@ -15,6 +15,15 @@ import org.w3c.dom.Text
 
 class CommunityAdapter(private val communityList: ArrayList<CommunityData>) : RecyclerView.Adapter<CommunityAdapter.ItemViewholder>() {
 
+//    interface OnItemClickListner{
+//        fun onItemClick(view: View, position: Int)
+//    }
+//    //객체 저장 변수
+//    private var itemClickListner: OnItemClickListner? =null
+//    fun setOnItemclickListner(itemClickListner: OnItemClickListner){
+//        this.itemClickListner = itemClickListner
+//    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewholder {
         val itemView =
             LayoutInflater.from(parent.context).inflate(R.layout.list_item_community,
@@ -37,12 +46,19 @@ class CommunityAdapter(private val communityList: ArrayList<CommunityData>) : Re
         return communityList.size
     }
 
-    class ItemViewholder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class ItemViewholder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imgCommunityImg: ImageView = itemView.findViewById(R.id.community_img)
         val tvCommunityTitle: TextView = itemView.findViewById(R.id.community_title)
         val tvWriter: TextView = itemView.findViewById(R.id.writer)
         val tvUploadTime: TextView = itemView.findViewById(R.id.uploadtime)
         val tvScore: TextView = itemView.findViewById(R.id.score)
         val tvViewCnt: TextView = itemView.findViewById(R.id.ViewCntNum)
+
+//        if(pos != RecyclerView.NO_POSITION){
+//                itemView.setOnClickListener{
+//                    OnItemClickListner.itemClickListner(R.id.CommunityCardView,)
+//                }
+//            }
+//        }
     }
 }

@@ -7,7 +7,7 @@
     android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
-        android:id ="@+id/clothesView"
+        android:id ="@+id/CommunityCardView"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

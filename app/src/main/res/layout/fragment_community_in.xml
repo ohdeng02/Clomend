@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/coordi_in_img"
         android:layout_width="320dp"
         android:layout_height="320dp"
         android:layout_marginTop="24dp"
@@ -34,7 +34,7 @@
         tools:src="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/Com_Coordi_Name"
+        android:id="@+id/Coordi_In_Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -53,8 +53,8 @@
         android:text="닉네임"
         android:textColor="@color/black"
         android:textSize="12dp"
-        app:layout_constraintStart_toStartOf="@+id/Com_Coordi_Name"
-        app:layout_constraintTop_toBottomOf="@+id/Com_Coordi_Name" />
+        app:layout_constraintStart_toStartOf="@+id/Coordi_In_Name"
+        app:layout_constraintTop_toBottomOf="@+id/Coordi_In_Name" />
 
     <TextView
         android:id="@+id/ViewCnt"
@@ -72,9 +72,9 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:src="@drawable/view_cnt"
-        app:layout_constraintBottom_toBottomOf="@+id/Com_Coordi_Name"
+        app:layout_constraintBottom_toBottomOf="@+id/Coordi_In_Name"
         app:layout_constraintEnd_toStartOf="@+id/ViewCnt"
-        app:layout_constraintTop_toTopOf="@+id/Com_Coordi_Name" />
+        app:layout_constraintTop_toTopOf="@+id/Coordi_In_Name" />
 
     <TextView
         android:id="@+id/Score"
@@ -102,8 +102,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:src="@drawable/share"
-        app:layout_constraintStart_toStartOf="@+id/imageView6"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+        app:layout_constraintStart_toStartOf="@+id/coordi_in_img"
+        app:layout_constraintTop_toBottomOf="@+id/coordi_in_img" />
 
     <ImageView
         android:id="@+id/imageView16"
