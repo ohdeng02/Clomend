@@ -5,14 +5,14 @@
     android:id="@+id/frameLayout9"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CoordiRecommendFragment" >
+    tools:context=".closet.CoordiRecommendFragment">
 
     <TextView
         android:id="@+id/today_coordi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="오늘의 코디"
+        android:text="스타일 추천"
         android:textColor="@color/black"
         android:textSize="24dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,17 +31,76 @@
         app:layout_constraintTop_toTopOf="@+id/today_coordi" />
 
     <ImageView
-        android:id="@+id/imageView21"
-        android:layout_width="320dp"
-        android:layout_height="320dp"
-        tools:layout_editor_absoluteX="45dp"
-        tools:layout_editor_absoluteY="134dp"
-        tools:src="@tools:sample/avatars" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="118dp"
+        android:id="@+id/sel_top"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/top_4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="455dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <ImageView
+        android:id="@+id/reco_bottom1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toTopOf="@+id/recommendBtn"
+        app:layout_constraintEnd_toStartOf="@+id/reco_bottom2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sel_top"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/recommendBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="추천"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reco_bottom1"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="상의를 선택하세요"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/today_coordi" />
+
+    <ImageView
+        android:id="@+id/left_minus"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/left_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/sel_top"
+        app:layout_constraintEnd_toStartOf="@+id/sel_top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sel_top" />
+
+    <ImageView
+        android:id="@+id/right_plus"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/right_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/sel_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sel_top"
+        app:layout_constraintTop_toTopOf="@+id/sel_top" />
+
+    <ImageView
+        android:id="@+id/reco_bottom2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toBottomOf="@+id/reco_bottom1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/reco_bottom1"
+        app:layout_constraintTop_toTopOf="@+id/reco_bottom1"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

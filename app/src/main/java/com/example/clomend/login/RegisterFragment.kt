@@ -42,7 +42,7 @@ class RegisterFragment : Fragment() {
                     Toast.makeText(requireContext(),"비밀번호가 일치하지 않습니다.", Toast.LENGTH_LONG).show()
                 else -> {
                     //id, pw, pw_confirm 입력값이 정상이면 DB에 아디 비번 저장 후 로그인페이지로 돌아감
-                    findNavController().navigate(R.id.action_global_loginFragment)
+                    findNavController().navigate(R.id.action_registerFragment_to_info_InputFragment)
                 }
             }
         }

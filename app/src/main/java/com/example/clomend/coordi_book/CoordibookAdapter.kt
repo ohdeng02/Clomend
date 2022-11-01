@@ -9,6 +9,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.clomend.R
 
 class CoordibookAdapter(private val coordiList: ArrayList<CoordibookData>):RecyclerView.Adapter<CoordibookAdapter.ItemViewholder>() {
+
+    interface OnItemClickListener{
+        fun onItemClick(view: View, position: Int)
+    }
+    private lateinit var mOnItemClickListener: OnItemClickListener
+    fun setOnItemClickListener(onItemClickListener: OnItemClickListener){
+        mOnItemClickListener = onItemClickListener
+    }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CoordibookAdapter.ItemViewholder {
         val itemView =
             LayoutInflater.from(parent.context).inflate(R.layout.list_item_coordi,
@@ -25,9 +33,17 @@ class CoordibookAdapter(private val coordiList: ArrayList<CoordibookData>):Recyc
     override fun getItemCount(): Int {
         return coordiList.size
     }
-    class ItemViewholder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class ItemViewholder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imgCoordiImg: ImageView = itemView.findViewById(R.id.coordi_img)
         val tvCoordiTitle: TextView = itemView.findViewById(R.id.coordi_title)
         val tvCoordiGenDate: TextView = itemView.findViewById(R.id.coordi_gen_date)
+        init {
+            itemView.setOnClickListener {
+                val pos = adapterPosition
+                if(pos != RecyclerView.NO_POSITION && mOnItemClickListener != null){
+                    mOnItemClickListener.onItemClick(itemView, pos)
+                }
+            }
+        }
     }
 }

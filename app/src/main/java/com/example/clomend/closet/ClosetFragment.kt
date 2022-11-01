@@ -9,7 +9,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.clomend.R
-import com.example.clomend.community.CommunityData
 import com.example.clomend.databinding.FragmentClosetBinding
 
 class ClosetFragment : Fragment() {
@@ -41,11 +40,17 @@ class ClosetFragment : Fragment() {
         adapter = ClosetAdapter(closetArrayList)
         recyclerView.adapter =adapter
 
+        adapter.setOnItemClickListener(object : ClosetAdapter.OnItemClickListener{
+            override fun onItemClick(view: View, position: Int) {
+                //findNavController().navigate(R.id.)
+            }
+        })
+
         binding.styleRecommend.setOnClickListener{
             findNavController().navigate(R.id.action_closetFragment_to_coordiRecommendFragment)
         }
-        binding.coordiCreate.setOnClickListener{
-            findNavController().navigate(R.id.action_closetFragment_to_coordiMakeFragment)
+        binding.clothesAdd.setOnClickListener{
+            findNavController().navigate(R.id.action_closetFragment_to_clothesAddFragment)
         }
         binding.weatherButton.setOnClickListener{
             findNavController().navigate(R.id.action_closetFragment_to_weatherFragment)

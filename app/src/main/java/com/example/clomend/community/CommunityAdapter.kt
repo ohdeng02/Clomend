@@ -1,35 +1,30 @@
 package com.example.clomend.community
 
-import android.content.Intent
-import android.util.Log
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.view.menu.MenuView.ItemView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.clomend.R
-import com.example.clomend.databinding.ListItemCommunityBinding
-import org.w3c.dom.Text
+
 
 class CommunityAdapter(private val communityList: ArrayList<CommunityData>) : RecyclerView.Adapter<CommunityAdapter.ItemViewholder>() {
 
-//    interface OnItemClickListner{
-//        fun onItemClick(view: View, position: Int)
-//    }
-//    //객체 저장 변수
-//    private var itemClickListner: OnItemClickListner? =null
-//    fun setOnItemclickListner(itemClickListner: OnItemClickListner){
-//        this.itemClickListner = itemClickListner
-//    }
+    interface OnItemClickListener{
+        fun onItemClick(view: View, position: Int)
+    }
+    private lateinit var mOnItemClickListener: OnItemClickListener
+    fun setOnItemClickListener(onItemClickListener: OnItemClickListener){
+        mOnItemClickListener = onItemClickListener
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewholder {
         val itemView =
             LayoutInflater.from(parent.context).inflate(R.layout.list_item_community,
                 parent, false)
         return ItemViewholder(itemView)
-
     }
 
     override fun onBindViewHolder(holder: ItemViewholder, position: Int) {
@@ -53,12 +48,14 @@ class CommunityAdapter(private val communityList: ArrayList<CommunityData>) : Re
         val tvUploadTime: TextView = itemView.findViewById(R.id.uploadtime)
         val tvScore: TextView = itemView.findViewById(R.id.score)
         val tvViewCnt: TextView = itemView.findViewById(R.id.ViewCntNum)
+        init {
+            itemView.setOnClickListener {
+                val pos = adapterPosition
+                if(pos != RecyclerView.NO_POSITION && mOnItemClickListener != null){
+                    mOnItemClickListener.onItemClick(itemView, pos)
+                }
+            }
+        }
+        }
 
-//        if(pos != RecyclerView.NO_POSITION){
-//                itemView.setOnClickListener{
-//                    OnItemClickListner.itemClickListner(R.id.CommunityCardView,)
-//                }
-//            }
-//        }
-    }
 }

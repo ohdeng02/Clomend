@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.clomend.R
@@ -16,6 +18,7 @@ import com.example.clomend.databinding.FragmentCoordiBookBinding
 class CoordiBookFragment : Fragment() {
     private var _binding: FragmentCoordiBookBinding? = null
     private val binding get() = _binding!!
+    lateinit var model: CoordiBookViewModel
 
     private lateinit var  adapter: CoordibookAdapter
     private lateinit var  recyclerView: RecyclerView
@@ -40,6 +43,14 @@ class CoordiBookFragment : Fragment() {
         recyclerView.setHasFixedSize(true)
         adapter = CoordibookAdapter(coordibookArrayList)
         recyclerView.adapter =adapter
+
+        adapter.setOnItemClickListener(object: CoordibookAdapter.OnItemClickListener{
+            override fun onItemClick(view: View, position: Int) {
+                model = ViewModelProvider(requireActivity()).get(CoordiBookViewModel::class.java)
+                model.sendarray(coordibookArrayList[position])
+                findNavController().navigate(R.id.action_coordi_BookFragment_to_coordiInFragment)
+            }
+        })
     }
     private fun dataInitialize(){
         coordibookArrayList = arrayListOf<CoordibookData>()

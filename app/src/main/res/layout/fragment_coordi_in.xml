@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout11"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CoordiInFragment">
+    tools:context=".coordi_book.CoordiInFragment">
 
     <TextView
         android:id="@+id/textView21"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView19"
+        android:id="@+id/backBtnCoordi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -31,7 +31,7 @@
         app:layout_constraintTop_toTopOf="@+id/textView21" />
 
     <TextView
-        android:id="@+id/textView22"
+        android:id="@+id/coordi_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -39,21 +39,21 @@
         android:text="코디 이름"
         android:textColor="@color/black"
         android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView23"
-        app:layout_constraintStart_toStartOf="@+id/imageView20"
+        app:layout_constraintBottom_toTopOf="@+id/Coordi_gen"
+        app:layout_constraintStart_toStartOf="@+id/coordi_book_img"
         app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
     <TextView
-        android:id="@+id/textView23"
+        android:id="@+id/Coordi_gen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="작성자"
-        app:layout_constraintBottom_toTopOf="@+id/imageView20"
-        app:layout_constraintEnd_toEndOf="@+id/imageView20" />
+        android:text="작성 날짜"
+        app:layout_constraintBottom_toTopOf="@+id/coordi_book_img"
+        app:layout_constraintEnd_toEndOf="@+id/coordi_book_img" />
 
     <ImageView
-        android:id="@+id/imageView20"
+        android:id="@+id/coordi_book_img"
         android:layout_width="320dp"
         android:layout_height="320dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -62,6 +62,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView21"
         app:layout_constraintVertical_bias="0.33"
-        tools:src="@tools:sample/avatars" />
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

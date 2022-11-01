@@ -1,6 +1,5 @@
 package com.example.clomend.community
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,17 +8,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Spinner
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.clomend.R
 import com.example.clomend.databinding.FragmentCommunityBinding
-import com.example.clomend.databinding.FragmentCoordiBookBinding
 
 class CommunityFragment : Fragment() {
     private var _binding : FragmentCommunityBinding? = null
     private val binding get() = _binding!!
+    lateinit var model: CommunityViewModel
 
     private lateinit var  adapter: CommunityAdapter
     private lateinit var  recyclerView: RecyclerView
@@ -58,6 +57,13 @@ class CommunityFragment : Fragment() {
         adapter = CommunityAdapter(communityArrayList)
         recyclerView.adapter =adapter
 
+        adapter.setOnItemClickListener(object: CommunityAdapter.OnItemClickListener{
+            override fun onItemClick(view: View, position: Int) {
+                model = ViewModelProvider(requireActivity()).get(CommunityViewModel::class.java)
+                model.sendarray(communityArrayList[position])
+                findNavController().navigate(R.id.action_communityFragment_to_communityInFragment)
+            }
+        })
 
         binding.communityWrite.setOnClickListener{
             findNavController().navigate(R.id.action_communityFragment_to_coordiUploadFragment)
@@ -108,7 +114,5 @@ class CommunityFragment : Fragment() {
                 score[i].toDouble(),viewCnt[i].toInt())
             communityArrayList.add(community)
         }
-
-
     }
 }

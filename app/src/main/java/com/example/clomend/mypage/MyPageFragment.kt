@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Spinner
+import androidx.navigation.fragment.findNavController
 import com.example.clomend.R
 import com.example.clomend.databinding.FragmentMyPageBinding
 
@@ -27,5 +28,9 @@ class MyPageFragment : Fragment() {
         val sex = resources.getStringArray(R.array.sex)
         val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_dropdown_item,sex )
         binding.sexSpinner.adapter = adapter
+
+        binding.logoutBtn.setOnClickListener{
+            findNavController().navigate(R.id.action_global_loginFragment)
+        }
     }
 }
