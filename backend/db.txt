@@ -1,0 +1,71 @@
+use clomendDB;
+CREATE TABLE user (
+    user_id int not null AUTO_INCREMENT,
+    loginid varchar(50) not NULL,
+    pwd varchar(100) not null,
+    user_name varchar(20) not null,
+    nickName varchar(20) not null,
+    profile_img varchar(50) default null,
+    height int default null,
+    weight int default null,
+    gender varchar(2) not null,
+    PRIMARY KEY (user_id)
+) ENGINE = InnoDB;
+
+
+CREATE TABLE clothes (
+    clothe_id int not null AUTO_INCREMENT,
+    user_id int not null ,
+    clothe_name varchar(30),
+    description varchar(100) default null,
+    color varchar(10),
+    image_id varchar(50),
+    category_id varchar(10) not null,
+    season_id varchar(10) not null,
+    constraint clothePK PRIMARY KEY (clothe_id, user_id),
+    CONSTRAINT clothes_userID FOREIGN KEY (user_id) REFERENCES user (user_id)
+) ENGINE = InnoDB;
+
+CREATE TABLE codi (
+    codi_id int not null AUTO_INCREMENT,
+    user_id int not null,
+    description varchar(100) default null,
+    codi_name varchar(20),
+    image_id varchar(50),
+    category_id varchar(30) not null,
+    date date,
+    constraint codiPK PRIMARY KEY (codi_id, user_id),
+    CONSTRAINT codi_userID FOREIGN KEY (user_id) REFERENCES user (user_id)
+) ENGINE = InnoDB;
+
+CREATE TABLE post (
+    post_id int not null AUTO_INCREMENT,
+    user_id int not null,
+    description varchar(100) default null,
+    title varchar(50) not null,
+    rating int,
+    views int,
+    date date,
+    codi_id int not null,
+    constraint postPK PRIMARY KEY (post_id),
+    CONSTRAINT post_userID FOREIGN KEY (user_id) REFERENCES codi (user_id),
+    CONSTRAINT post_codiID FOREIGN KEY (codi_id) REFERENCES codi (codi_id)
+) ENGINE = InnoDB;
+
+CREATE TABLE calendar (
+    wearing_date date not null,
+    codi_id int not null,
+    user_id int not null,
+    constraint calendarPK PRIMARY KEY (wearing_date),
+    CONSTRAINT calendar_userID FOREIGN KEY (user_id) REFERENCES codi (user_id),
+    CONSTRAINT calendar_codiID FOREIGN KEY (codi_id) REFERENCES codi (codi_id)
+) ENGINE = InnoDB;
+
+CREATE TABLE codi_clothes (
+    codi_id int not null,
+    user_id int not null,
+    clothe_id int not null,
+    image_id int not null,
+    constraint codi_clothesPK PRIMARY KEY (codi_id, user_id, clothe_id),
+    CONSTRAINT codi_clothes_userID FOREIGN KEY (user_id) REFERENCES codi (user_id)
+) ENGINE = InnoDB;
