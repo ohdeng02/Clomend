@@ -1,0 +1,123 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "collapsed_sections": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "source": [
+        "from google.colab import drive\n",
+        "drive.mount('/content/drive')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3hSqiW1FJu6R",
+        "outputId": "524e78e1-2638-4545-f7b6-0ee40d1439b8"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Drive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount(\"/content/drive\", force_remount=True).\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "pip install extcolors"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "rHapmzQqRgBl",
+        "outputId": "fc2f7b9d-1157-400e-9cfd-18f95bdb69a4"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/\n",
+            "Requirement already satisfied: extcolors in /usr/local/lib/python3.7/dist-packages (1.0.0)\n",
+            "Requirement already satisfied: convcolors>=1.0.0 in /usr/local/lib/python3.7/dist-packages (from extcolors) (2.2.0)\n",
+            "Requirement already satisfied: Pillow>=8.0.0 in /usr/local/lib/python3.7/dist-packages (from extcolors) (9.2.0)\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 14,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Bl8QLbbhQ--k",
+        "outputId": "3d87c3e4-790e-4ee2-e2e5-e8f89732a003"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "(27.69230769230768, 7.065217391304354, 72.15686274509804)\n",
+            "(280.0, 25.0, 4.705882352941177)\n",
+            "(326.66666666666663, 8.823529411764715, 40.0)\n"
+          ]
+        }
+      ],
+      "source": [
+        "import extcolors\n",
+        "from PIL import Image\n",
+        "\n",
+        "def rgb_to_hsv(r, g, b):\n",
+        "    r, g, b = r/255.0, g/255.0, b/255.0\n",
+        "    mx = max(r, g, b)\n",
+        "    mn = min(r, g, b)\n",
+        "    df = mx-mn\n",
+        "    if mx == mn:\n",
+        "        h = 0\n",
+        "    elif mx == r:\n",
+        "        h = (60 * ((g-b)/df) + 360) % 360\n",
+        "    elif mx == g:\n",
+        "        h = (60 * ((b-r)/df) + 120) % 360\n",
+        "    elif mx == b:\n",
+        "        h = (60 * ((r-g)/df) + 240) % 360\n",
+        "    if mx == 0:\n",
+        "        s = 0\n",
+        "    else:\n",
+        "        s = (df/mx)*100\n",
+        "    v = mx*100\n",
+        "    return h, s, v\n",
+        "\n",
+        "img = Image.open(\"/content/sample_data/codie.jpg\")\n",
+        "colors, pixel_count = extcolors.extract_from_image(img)\n",
+        "\n",
+        "pixel_output = 0\n",
+        "for c in colors:\n",
+        "    pixel_output += c[1]\n",
+        "    print(f'{rgb_to_hsv(c[0][0],c[0][1],c[0][2])}')"
+      ]
+    }
+  ]
+}
